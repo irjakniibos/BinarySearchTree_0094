@@ -14,3 +14,7 @@ class Node {
         rigthchild=r;
     }
 };
+
+class BinaryTree {
+    
+};
