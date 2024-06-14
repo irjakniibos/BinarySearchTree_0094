@@ -46,5 +46,21 @@ class BinaryTree {
 		}
     }
 
+    void search(string element, Node*& parent, Node*& currentNode) 
+	{  // Locate the node which will be the parent of the new node
+		// This function searches the current Node of the specified Node as well as the currentNode of its parent
+		currentNode = ROOT;
+		parent = NULL;
+
+		while ((currentNode != NULL) && (currentNode->info != element)) {  // While the currentNode is not NULL and the value in the data field of the currentNode is not equal to the value in the data field of the new node
+			parent = currentNode;  // Make the parent point to the currentNode
+			if (element < currentNode->info) {  // If the value in the data field of the new node is less than the value in the data field of the currentNode
+				currentNode = currentNode->leftchild;  // Make the currentNode point to the left child of the currentNode
+			}
+			else {  // If the value in the data field of the new node is greater than the value in the data field of the currentNode
+				currentNode = currentNode->rightchild;  // Make the currentNode point to the right child of the currentNode
+			}
+		}
+	}
 
 };
