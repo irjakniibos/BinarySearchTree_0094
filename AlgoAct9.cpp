@@ -7,4 +7,10 @@ class Node {
         string info;
         Node* leftchild;
         Node* rigthchild;
+
+    Node(string i, Node* l,Node* r){
+        info=i;
+        leftchild=l;
+        rigthchild=r;
+    }
 };
