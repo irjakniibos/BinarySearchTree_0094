@@ -24,5 +24,6 @@ class BinaryTree {
 
     void insert(string element){
         Node* newNode= new Node(element,nullptr,nullptr);// Initializing ROOT to null
+        newNode->info = element;  // Assign to the data field of the new node
     }
 };
