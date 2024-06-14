@@ -16,10 +16,13 @@ class Node {
 };
 
 class BinaryTree {
-    Public:
-        Node* ROOT;
-
+    public:
+	Node* ROOT;
     BinaryTree(){
         ROOT = nullptr;
+    }
+
+    void insert(string element){
+        Node* newNode= new Node(element,nullptr,nullptr);// Initializing ROOT to null
     }
 };
